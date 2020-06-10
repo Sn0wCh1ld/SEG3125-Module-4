@@ -1,0 +1,52 @@
+html {
+    margin: 25px;
+}
+
+body {
+    text-align: center;
+    background-color: rgb(61, 58, 54);
+}
+
+img {
+    margin: 10px;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.content {
+    text-align: left;
+    color: white;
+}
+
+.center {
+    text-align: center;
+}
+
+form {
+    text-align: left;
+}
+
+.appointment {
+    max-width: 100%;
+    width: 600px;
+    display: inline-block;
+    padding: 20px;
+    margin: 20px;
+
+    background-color: grey;
+    border-radius: 10px;
+}
+
+hr {
+    border: 3px solid white;
+    border-radius: 2px;
+}
+
+.formcontainer {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    margin: 20px;
+}
