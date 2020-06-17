@@ -7,7 +7,7 @@ body {
     background-color: rgb(61, 58, 54);
 }
 
-img {
+.promo {
     margin: 10px;
     max-width: 100%;
     border-radius: 10px;
@@ -49,4 +49,18 @@ hr {
 footer {
     text-align: center;
     margin: 20px;
+}
+
+.navbar {
+    border-radius: 10px;
+}
+
+.iconTitle {
+    display: flex;
+}
+
+.icon {
+    margin-right: 5px;
+    width: 1.2em;
+    height: 1.2em;
 }

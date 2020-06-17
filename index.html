@@ -1,109 +1,199 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>General Bicycle</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="alert alert-warning" role="alert">
-            COVID-19 Alert: Please make an appointment for repairs and other servicing, as walk-in repairs are currently not being accepted
-        </div>
 
-        <div class="jumbotron">
-            <img src="Logo.png" width="200px">
-            <h1>General Bicycle</h1>
-            <h6>Repairs, Maintenance & Sales</h6>
-            <p>20 Eglinton Ave E, Toronto | (416) 967-1111</p>
+<head>
+    <title>General Bicycle</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery/jquery-3.5.1.min.js"></script>
+    <script src="js/validation.js"></script>
+</head>
+
+<body>
+    <div class="alert alert-warning" role="alert">
+        COVID-19 Alert: Please make an appointment for repairs and other servicing, as walk-in repairs are currently not
+        being accepted
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">General Bicycle</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Book Appointment</a>
+                </li>
+            </ul>
         </div>
-        
-        <div class="content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-6 align-self-center">
-                        <h1>About Us</h1>
-                        <p>Established in 1989, General Bicycle has been a leader in bicycle maintenance innovation. Our mechanics are trained in quality and efficiency, to ensure the best possible service in the least amount of time. We employ some of the best bicycle mechanics in the world to provide our valuable customers with an unmatched experience every single time.</p>
-                    </div>
-                    <div class="col-lg-6 align-self-center">
-                        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/joel-working-0065-1579013157.jpg?crop=1.00xw:0.849xh;0,0.0168xh&resize=1600:*">
-                    </div>
+    </nav>
+    <br>
+
+    <div class="jumbotron">
+        <img src="Logo.png" width="200px">
+        <h1>General Bicycle</h1>
+        <h6>Repairs, Maintenance & Sales</h6>
+        <p>20 Eglinton Ave E, Toronto | (416) 967-1111</p>
+    </div>
+
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 align-self-center">
+                    <h1>About Us</h1>
+                    <p>Established in 1989, General Bicycle has been a leader in bicycle maintenance innovation. Our
+                        mechanics are trained in quality and efficiency, to ensure the best possible service in the
+                        least amount of time. We employ some of the best bicycle mechanics in the world to provide our
+                        valuable customers with an unmatched experience every single time.</p>
+                </div>
+                <div class="col-lg-6 align-self-center">
+                    <img
+                        src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/joel-working-0065-1579013157.jpg?crop=1.00xw:0.849xh;0,0.0168xh&resize=1600:*" class="promo">
                 </div>
             </div>
-            <br><hr><br>
-            <div class="formcontainer">
-                <h1>Book an Appointment</h1>
-                <div class="center appointment">
-                    <form>
-                        <div class="form-group">
+        </div>
+        <br>
+        <hr><br>
+        <div class="formcontainer">
+            <h1>Book an Appointment</h1>
+            <div class="center appointment">
+                <form name="appointment" onsubmit="return validateBookAppointment()">
+                    <div class="form-group">
+                        <div class="iconTitle">
+                            <img src="https://img.icons8.com/metro/26/FFFFFF/services.png" class="icon"/>
                             <h6>What services would you like?</h6>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="0" id="defaultCheck1">
-                                <label class="form-check-label" for="defaultCheck1">
-                                  Brake Change ($75)
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="1" id="defaultCheck2">
-                                <label class="form-check-label" for="defaultCheck2">
-                                    Tire Replacement ($100)
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="2" id="defaultCheck3">
-                                <label class="form-check-label" for="defaultCheck3">
-                                    General Maintenance ($50)
-                                </label>
-                            </div>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="0" id="serviceCheck1">
+                            <label class="form-check-label" for="serviceCheck1">
+                                Brake Change ($75)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="1" id="serviceCheck2">
+                            <label class="form-check-label" for="serviceCheck2">
+                                Tire Replacement ($100)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="2" id="serviceCheck3">
+                            <label class="form-check-label" for="serviceCheck3">
+                                General Maintenance ($50)
+                            </label>
+                        </div>
 
-                            <br>
+                        <br>
+                        <div class="iconTitle">
+                            <img src="https://img.icons8.com/material/24/FFFFFF/worker-male--v1.png" class="icon"/>
+                            <h6>What kind of professional(s) would you like?</h6>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="0" id="proCheck1">
+                            <label class="form-check-label" for="proCheck1">
+                                Mechanic
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="1" id="proCheck2">
+                            <label class="form-check-label" for="proCheck2">
+                                Engineer
+                            </label>
+                        </div>
+
+                        <br>
+                        <div class="iconTitle">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAe0lEQVRIie2U3QmAMAyEL+IYxX10kC4e9zhfREqsVI0/iP3eWtK7SwoB3oIz3rrm2lgFA5IDSU0TsYCpU5J9qinGQAEEZ2gVkW7LoDjzPYjIovvsH9xBm7tMWzxCbsTfH1E1qAbVYL0qRgDBuVU1PdgOoi04IR4d7//IBBwTW69sCBTyAAAAAElFTkSuQmCC" class="icon">
                             <h6>Choose an available date to schedule your appointment:</h6>
-                            <div class="container">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="dateRadios" id="dateRadio1" value="option1">
-                                    <label class="form-check-label" for="dateRadio1">
-                                        June 11, 2 PM
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="dateRadios" id="dateRadio2" value="option2">
-                                    <label class="form-check-label" for="dateRadio2">
-                                        June 11, 4 PM
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="dateRadios" id="dateRadio3" value="option3">
-                                    <label class="form-check-label" for="dateRadio3">
-                                        June 12, 11 AM
-                                    </label>
-                                </div>
+                        </div>
+                        <div class="container">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="dateRadios" id="dateRadio1"
+                                    value="option1">
+                                <label class="form-check-label" for="dateRadio1">
+                                    June 11, 2 PM
+                                </label>
                             </div>
-
-                            <br>
-                            <h6>Please enter your contact information</h6>
-                            <input type="text" class="form-control" placeholder="Full Name" aria-label="Full Name">
-                            <br>
-                            <input type="text" class="form-control" placeholder="Email Address" aria-label="Email Address">
-                            <br>
-                            <input type="text" class="form-control" placeholder="Phone Number" aria-label="Phone Number">
-                            <br>
-                            <div class="center">
-                                <button class="btn btn-primary" type="submit">Book Appointment</button>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="dateRadios" id="dateRadio2"
+                                    value="option2">
+                                <label class="form-check-label" for="dateRadio2">
+                                    June 11, 4 PM
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="dateRadios" id="dateRadio3"
+                                    value="option3">
+                                <label class="form-check-label" for="dateRadio3">
+                                    June 12, 11 AM
+                                </label>
                             </div>
                         </div>
-                    </form>
-                </div>
+
+                        <br>
+                        <div class="iconTitle">
+                            <img src="https://img.icons8.com/material/24/FFFFFF/business-contact--v1.png" class="icon"/>
+                            <h6>Please enter your contact information</h6>
+                        </div>
+                        <input type="text" name="fullname" class="form-control" placeholder="Full Name" aria-label="Full Name">
+                        <br>
+                        <input type="text" name="email" class="form-control" placeholder="Email Address" aria-label="Email Address">
+                        <br>
+                        <input type="text" name="phone" class="form-control" placeholder="Phone Number" aria-label="Phone Number">
+
+
+                        <br>
+                        <div class="iconTitle">
+                            <img src="https://img.icons8.com/material/24/FFFFFF/card-in-use--v1.png" class="icon"/>
+                            <h6>Payment Information</h6>
+                        </div>
+                        
+                        <input type="text" name="cardnumber" class="form-control" placeholder="Credit Card Number"
+                            aria-label="Credit Card Number">
+                        <br>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-6 align-self-center">
+                                    <input type="text" name="cvv" class="form-control" placeholder="CVV" aria-label="CVV">
+                                </div>
+                                <div class="col-lg-6 align-self-center">
+                                    <input type="text" name="postalcode" class="form-control" placeholder="Postal Code" aria-label="Postal Code">
+                                </div>
+                            </div>
+                        </div>
+
+                        <br>
+                        <div class="center">
+                            <button class="btn btn-primary" type="submit"><img src="https://img.icons8.com/material/24/FFFFFF/overtime--v1.png" class="icon"/>Book Appointment</button>
+                        </div>
+                    </div>
+                </form>
             </div>
-        
+        </div>
 
 
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    </body>
 
-    <footer>
-        Copyright © 2020 Justin Proulx
-    </footer>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+</body>
+
+<footer>
+    Copyright © 2020 Justin Proulx
+</footer>
+
 </html>
